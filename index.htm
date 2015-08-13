@@ -64,6 +64,14 @@
 max-width: 100%;
 margin: 0 auto;
 }</style>
+
+<script>
+$(document).ready(function(){
+    $("#clickme").click(function(){
+        alert("Invalid login");
+    });
+});
+</script>
 	</head>
 <body>
 <div class="row">
@@ -84,21 +92,32 @@ margin: 0 auto;
 			<!-- Social Login -->
 			<div class="social_login">
 				
+<form>
+					<label>Username</label>
+					<input type="text" />
+					<br />
 
-				<div class="centeredText">
-					<span>Signup or Login</span>
-				</div>
+					<label>Password</label>
+					<input type="password" />
+					<br />
 
-				<div class="action_btns">
-					<div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
-					<div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
-				</div>
+					<div class="checkbox">
+						<input id="remember" type="checkbox" />
+						<label for="remember">Remember me on this computer</label>
+					</div>
+
+					<div class="action_btns">
+						<div class="one_half last"><a href="#" class="btn btn_red" id="clickme">Login</a></div>
+					</div>
+				</form>
+				
+
 			</div>
 
 			<!-- Username & Password Login form -->
 			<div class="user_login">
 				<form>
-					<label>Email / Username</label>
+					<label>Username</label>
 					<input type="text" />
 					<br />
 
